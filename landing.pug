@@ -1,12 +1,17 @@
-	extend componentes/plantilla.pug
-	block contenido
-		section.intro 
-			.intro__imagen: img(src="/images/imagen.png", alt="")
-			.intro__contenido 
-				h2 #{titulos[0]}
-				p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores unde vitae blanditiis sequi consectetur similique ipsam, sint ipsum tempora dignissimos aut error quos in ex aliquam neque ratione inventore quidem.Neque, adipisci? Neque doloribus saepe harum ipsa eos dolores eum, iusto non quam blanditiis hic, vitae, soluta pariatur consequuntur placeat architecto molestias. Nesciunt nulla error quasi reiciendis natus. Non facilis maxime, vero blanditiis eaque saepe culpa aliquam explicabo! Placeat quasi, libero nam quas consectetur obcaecati minus id aliquam!
-				span holaaaa k ase 
-		main.contenido
-			+caja(titulos[1],"Esta es la primer caja  con mixin")
-			+caja(titulos[2],"Esta es la segunda caja  con mixin")
-			+caja(titulos[3],"Esta es la tercer caja  con mixin")
+include componentes/config.pug
+doctype html
+html
+    include componentes/head.pug
+    body
+        include componentes/header.pug
+        main.principal
+            include componentes/nav.pug
+            section.principal__section
+                h1.principal__titulo #{titulos[2]}
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, minus? Quaerat, vero sit eveniet vel minus eius asperiores laborum similique saepe sequi mollitia iusto debitis qui alias voluptas non magnam.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, minus? Quaerat, vero sit eveniet vel minus eius asperiores laborum similique saepe sequi mollitia iusto debitis qui alias voluptas non magnam.
+                a.button.absoluto VER MAS
+        include componentes/footer.pug
+
+
+    
